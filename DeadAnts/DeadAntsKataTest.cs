@@ -31,5 +31,21 @@ namespace DeadAnts
 
             Assert.AreEqual(2, actual);
         }
+
+        [TestMethod]
+        public void null_return_0()
+        {
+            var actual = _kata.GetDeadAntsCount(null);
+
+            Assert.AreEqual(0, actual);
+        }
+
+        [TestMethod]
+        public void Empty_string_return_0()
+        {
+            var actual = _kata.GetDeadAntsCount("       ");
+
+            Assert.AreEqual(0, actual);
+        }
     }
 }
