@@ -23,5 +23,13 @@ namespace DeadAnts
 
             Assert.AreEqual(1, actual);
         }
+
+        [TestMethod]
+        public void Two_dead_ant_has_head_and_body_return_2()
+        {
+            var actual = _kata.GetDeadAntsCount("a ant n ant ... nt");
+
+            Assert.AreEqual(2, actual);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace DeadAnts
 {
@@ -8,7 +9,7 @@ namespace DeadAnts
         {
             var bodies = ants.Replace("ant", "");
 
-            var deadAntsCount = bodies.Trim().Count(x => x == 'a');
+            var deadAntsCount = Math.Max(bodies.Trim().Count(x => x == 't'), Math.Max(bodies.Trim().Count(x => x == 'a'), bodies.Trim().Count(x => x == 'n')));
 
             return deadAntsCount;
         }
